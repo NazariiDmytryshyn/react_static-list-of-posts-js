@@ -7,14 +7,14 @@ import usersFromServer from './api/users.json';
 
 export const App = () => {
   return (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+    <section className="App">
+      <h1 className="App__title">Static list of posts</h1>
 
-    <PostList
-      posts={postsFromServer}
-      comments={commentsFromServer}
-      users={usersFromServer}
-    />
-  </section>
-  )
+      <PostList
+        posts={postsFromServer}
+        comments={commentsFromServer}
+        users={usersFromServer}
+      />
+    </section>
+  );
 };

@@ -18,7 +18,9 @@
 import './UserInfo.scss';
 
 export const UserInfo = ({ user, showEmailOnly }) => {
-  {console.log(user)}
+  {
+    console.log(user);
+  }
   return (
     <>
       {user &&
