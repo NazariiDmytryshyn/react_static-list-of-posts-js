@@ -9,7 +9,7 @@ export const CommentInfo = ({ comment }) => {
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{comment.name}</strong>
         {' by '}
-        <UserInfo user={user} showEmailOnly={true} />
+        <UserInfo user={user} showEmailOnly />
       </div>
 
       <div className="CommentInfo__body">{comment.body}</div>
