@@ -1,15 +1,16 @@
-import { UserInfo } from '../UserInfo/UserInfo';
-import usersFromServer from '../../api/users.json';
-
-export const CommentInfo = ({ comment }) => {
-  const user = usersFromServer.find(user => user.id === comment.userId);
-
+export const CommentInfo = ({ comment, user }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{comment.name}</strong>
-        {' by '}
-        <UserInfo user={user} showEmailOnly />
+        {user && (
+          <>
+            {' by '}
+            <a className="CommentInfo__email" href={`mailto:${user.email}`}>
+              {user.email}
+            </a>
+          </>
+        )}
       </div>
 
       <div className="CommentInfo__body">{comment.body}</div>
